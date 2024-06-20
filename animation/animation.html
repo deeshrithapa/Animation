@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <link rel="stylesheet" href="animation.css">
+</head>
+<body>
+    <div>
+        <h1 class="heading">CSS Animation</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="marquee-container">
+            <div class="marquee">
+                <span>This is a sliding text marquee.</span>
+                <span>It continuously moves text from right to left across the screen.</span>
+                <span>It wraps around seamlessly and is an example of CSS animations.</span>
+                <span>Make the animation continuous.</span>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://alumni.mcmaster.ca/s/1439/images/editor/qotw/2021/sun_3.jpeg" alt="Image 1">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Section 1 - Image 1
+                    </div>
+                    <div class="accordion-content">
+                        <p>Content for Section 1 - Image 1 goes here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.pexels.com/photos/4992805/pexels-photo-4992805.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Image 2">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Section 1 - Image 2
+                    </div>
+                    <div class="accordion-content">
+                        <p>Content for Section 1 - Image 2 goes here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://www.teahub.io/photos/full/223-2237751_snow-mountains-wallpaper-iphone.jpg" alt="Image 3">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Section 1 - Image 3
+                    </div>
+                    <div class="accordion-content">
+                        <p>Content for Section 1 - Image 3 goes here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/736x/52/d2/25/52d2257e344d99d6ff485e1634f99798.jpg" alt="Image 4">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Section 1 - Image 4
+                    </div>
+                    <div class="accordion-content">
+                        <p>Content for Section 1 - Image 4 goes here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-front">
+                    <h2>Front Side</h2>
+                    <p>This is the front side of the card.</p>
+                </div>
+                <div class="card-back">
+                    <h2>Back Side</h2>
+                    <p>This is the back side of the card.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <button class="btn1">Hover Button</button>
+            <div class="circle"></div>
+            <div class="loading-spinner"></div>
+        </div>
+        <div class="circle-container">
+            <div class="circle1"></div>
+          </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="controls">
+            <label for="progressValue">Progress Value (%):</label>
+            <input type="number" id="progressValue" min="0" max="100" step="1" value="50">
+            <button onclick="updateProgress()">Update Progress</button>
+        </div>
+
+        <button id="toggleMenu">Menu</button>
+    </div>
+
+    <script src="animation.js"></script>
+</body>
+</html>
