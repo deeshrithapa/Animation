@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GizmoHub - GizmoMax</title>
+  <link href="../dist/styles.css" rel="stylesheet">
+  <style>
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.5s;
+    }
+    .carousel-item {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .carousel img {
+      width: 100%;
+      height: auto;
+    }
+    .carousel-prev, .carousel-next {
+      position: absolute;
+      top: 95%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .carousel-prev {
+      left: 10px;
+    }
+    .carousel-next {
+      right: 10px;
+    }
+    /* Ensure carousel controls only affect the product section */
+    #product .carousel-prev, #product .carousel-next {
+      display: block;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased">
+
+  <!-- Header Section -->
+  <header class="bg-gray-800 text-white p-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">GizmoHub</div>
+    <nav class="hidden md:flex space-x-4">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#product" class="hover:underline">Product</a>
+      <a href="#reviews" class="hover:underline">Reviews</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </nav>
+    <button class="md:hidden focus:outline-none" id="menu-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </header> 
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-gray-200 text-center p-8">
+    
+      <img src="../image/pic.avif" alt="GizmoMax" class="mx-auto max-w-xs md:max-w-md">
+    <h1 class="text-4xl font-bold mt-4">Introducing GizmoMax</h1>
+    <p class="mt-2 text-lg">The future of tech gadgets is here.</p>
+    <a href="#product" class="mt-4 inline-block bg-blue-500 text-white px-6 py-3 rounded-full">Learn More</a>   
+    
+  </section>
+
+  <!-- Product Details Section -->
+  <section id="product" class="bg-white text-center p-8 relative">
+    <h2 class="text-3xl font-bold">GizmoMax Features</h2>
+    <p class="mt-4 text-lg">The GizmoMax is packed with amazing features to make your life easier.</p>
+
+    <div class="relative mt-8">
+      <div class="carousel overflow-hidden relative w-full max-w-4xl mx-auto">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item">
+            <img src="../image/pic1.avif" alt="GizmoMax 1" class="mx-auto max-w-xs md:max-w-md">
+            <div class="mt-4">
+              <span class="text-2xl font-bold">Rs.2500</span>
+              <a href="#buy" class="ml-4 bg-blue-500 text-white px-6 py-3 rounded-full">Buy Now</a>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <img src="../image/pic2.avif" alt="GizmoMax 2" class="mx-auto max-w-xs md:max-w-md">
+            <div class="mt-4">
+              <span class="text-2xl font-bold">Rs.2000</span>
+              <a href="#buy" class="ml-4 bg-blue-500 text-white px-6 py-3 rounded-full">Buy Now</a>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <img src="../image/pic3.avif" alt="GizmoMax 3" class="mx-auto max-w-xs md:max-w-md">
+            <div class="mt-4">
+              <span class="text-2xl font-bold">Rs.2200</span>
+              <a href="#buy" class="ml-4 bg-blue-500 text-white px-6 py-3 rounded-full">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel Controls -->
+        <button class="carousel-prev">❮</button>
+        <button class="carousel-next">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews Section -->
+  <section id="reviews" class="bg-gray-200 text-center p-8">
+    <h2 class="text-3xl font-bold">Customer Reviews</h2>
+    <div class="mt-4 space-y-4">
+      <blockquote class="bg-white p-4 rounded shadow-md">
+        <p class="text-lg">"The GizmoMax has changed my life. Highly recommend it!"</p>
+        <footer class="mt-2">- Aasma Subba</footer>
+      </blockquote>
+      <blockquote class="bg-white p-4 rounded shadow-md">
+        <p class="text-lg">"A must-have gadget for tech enthusiasts."</p>
+        <footer class="mt-2">- Prasamsha Maharjan</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-white-50 text-center p-8">
+    <h2 class="text-3xl font-bold">Contact Us</h2>
+    <form class="mt-4 space-y-4 max-w-md mx-auto">
+      <div>
+        <label for="name" class="block text-lg">Name</label>
+        <input type="text" id="name" class="w-full px-4 py-2 border rounded" required>
+      </div>
+      <div>
+        <label for="email" class="block text-lg">Email</label>
+        <input type="email" id="email" class="w-full px-4 py-2 border rounded" required>
+      </div>
+      <div>
+        <label for="message" class="block text-lg">Message</label>
+        <textarea id="message" class="w-full px-4 py-2 border rounded" required></textarea>
+      </div>
+      <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-full">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-white text-center p-4">
+    <div class="space-x-4">
+      <a href="#" class="hover:underline">Privacy Policy</a>
+      <a href="#" class="hover:underline">Terms of Service</a>
+    </div>
+    <div class="mt-2">
+      <a href="#" class="inline-block mx-2">Facebook</a>
+      <a href="#" class="inline-block mx-2">Twitter</a>
+      <a href="#" class="inline-block mx-2">Instagram</a>
+    </div>
+    <p class="mt-4">&copy; 2024 GizmoHub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    });
+
+    const carousel = document.querySelector('.carousel-inner');
+    const nextButton = document.querySelector('.carousel-next');
+    const prevButton = document.querySelector('.carousel-prev');
+    let currentIndex = 0;
+
+    nextButton.addEventListener('click', () => {
+      const items = document.querySelectorAll('.carousel-item');
+      if (currentIndex < items.length - 1) {
+        currentIndex++;
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+    });
+
+    prevButton.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+    });
+  </script>
+</body>
+
+
+</html>
